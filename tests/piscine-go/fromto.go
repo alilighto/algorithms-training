@@ -1,6 +1,6 @@
 package piscine
 
-func Itoa(n int) string {
+func Itoascii(n int) string {
 	str := ""
 	i := ""
 	if n < 0 {
@@ -11,7 +11,7 @@ func Itoa(n int) string {
 		return "0"
 	}
 	for n > 0 {
-		str = string('0' + n%10) + str
+		str = string(rune('0' + n%10)) + str
 		n /= 10
 	}
 	return str
@@ -23,7 +23,7 @@ func FromTo(start, end int) string {
 	}
 
 	if start == end {
-		return Itoa(start) + "\n"
+		return Itoascii(start) + "\n"
 	}
 
 	str, step := "", 1
@@ -35,12 +35,11 @@ func FromTo(start, end int) string {
 		if i >= 0 && i <= 9 {
 			str += "0"
 		}
-		str += Itoa(i)
+		str += Itoascii(i)
 		if i == end {
 			break
 		}
 		str += ", "
 	}
-
 	return str + "\n"
 }
