@@ -10,18 +10,18 @@ func fprime(value int) {
 	if value == 1 {
 		return
 	}
-	divisionIterator := 2
+	div := 2
 	for value > 1 {
-		if value%divisionIterator == 0 {
-			fmt.Print(divisionIterator)
-			value = value / divisionIterator
+		if value%div == 0 {
+			fmt.Print(div)
 
+			value = value / div
 			if value > 1 {
 				fmt.Print("*")
 			}
-			divisionIterator--
+			div--
 		}
-		divisionIterator++
+		div++
 	}
 	fmt.Println()
 }

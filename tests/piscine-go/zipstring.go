@@ -1,6 +1,6 @@
 package piscine
 
-func ascitoi(n int) string {
+func itoaa(n int) string {
 	str, sign := "", ""
 	if n < 0 {
 		sign = "-"
@@ -23,7 +23,7 @@ func ZipString(s string) string {
 		if i+1 < len(s) && s[i] == s[i+1] {
 			co++
 		} else {
-			str += ascitoi(co) + string(s[i])
+			str += itoaa(co) + string(s[i])
 			co = 1
 		}
 	}

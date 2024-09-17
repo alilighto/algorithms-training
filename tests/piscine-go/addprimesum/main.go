@@ -74,6 +74,5 @@ func main() {
 		os.Stdout.WriteString("0" + "\n")
 		return
 	}
-
 	os.Stdout.WriteString(Itoaa(sumOfPrimes(num)) + "\n")
 }
